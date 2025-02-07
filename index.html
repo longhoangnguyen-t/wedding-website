@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Wedding Website</title>
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <a href="/" class="logo">Wedding</a>
+      <a href="#" class="menu" onclick="toggleMenu();">
+        <ion-icon class="open" name="menu-outline"></ion-icon>
+        <ion-icon class="close" name="close-outline"></ion-icon></a>
+      <ul class="nav">
+        <li>
+          <a class="nav-btn active" href="/" onclick="resetHeader();"
+            ><ion-icon name="home-outline"></ion-icon
+          ></a>
+        </li>
+        <li><a class="nav-btn" href="#about" data-target="about">About</a></li>
+        <li>
+          <a class="nav-btn" href="#service" data-target="services">Services</a>
+        </li>
+        <li>
+          <a class="nav-btn" href="#portfolio" data-target="portfolio"
+            >Portfolio</a
+          >
+        </li>
+        <li>
+          <a class="nav-btn" href="#contact" data-target="contact">Contact</a>
+        </li>
+      </ul>
+
+      
+    </header>
+    <!--mobile nav-->
+      <ul class="nav-mobile">
+        <li><a href="/" class="nav-btn active" onclick="resetHeader();"><ion-icon name="home-outline"></ion-icon></a></li>
+        <li><a href="#" class="nav-btn" data-target="about">about</a></li>
+        <li><a href="#" class="nav-btn" data-target="services">services</a></li>
+        <li><a href="#" class="nav-btn" data-target="portfolio">portfolio</a></li>
+        <li><a href="#" class="nav-btn" data-target="contact">contact</a></li>
+      </ul>
+    <!-- banner -->
+    <div class="banner container-fluid">
+      <div class="bg-slide slide-1 active">
+        <div class="content">
+          <h1>Wedding</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+            aperiam ipsum doloribus sit, deleniti illo accusamus quos iure
+            accusantium officiis quas cum tempora aspernatur soluta itaque est
+            et repellat quia.
+          </p>
+        </div>
+        <div class="circle bg">
+          <img src="images/wedding-1.jpg" alt="" />
+          <div class="circle large">
+            <img src="images/wedding-1.jpg" alt="" />
+            <div class="circle small">
+              <img src="images/wedding-1.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-slide slide-2">
+        <div class="content">
+          <h1>Ceremony</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+            aperiam ipsum doloribus sit, deleniti illo accusamus quos iure
+            accusantium officiis quas cum tempora aspernatur soluta itaque est
+            et repellat quia.
+          </p>
+        </div>
+        <div class="circle bg">
+          <img src="images/wedding-2.jpg" alt="" />
+          <div class="circle large">
+            <img src="images/wedding-2.jpg" alt="" />
+            <div class="circle small">
+              <img src="images/wedding-2.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-slide slide-3">
+        <div class="content">
+          <h1>Honeymoon</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+            aperiam ipsum doloribus sit, deleniti illo accusamus quos iure
+            accusantium officiis quas cum tempora aspernatur soluta itaque est
+            et repellat quia. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Earum aperiam ipsum doloribus sit, deleniti illo accusamus
+            quos iure accusantium officiis quas cum tempora aspernatur soluta
+            itaque est et repellat quia.
+          </p>
+        </div>
+        <div class="circle bg">
+          <img src="images/wedding-3.jpg" alt="" />
+          <div class="circle large">
+            <img src="images/wedding-3.jpg" alt="" />
+            <div class="circle small">
+              <img src="images/wedding-3.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="slide-loader">
+        <li><a href="" class="slide-btn active" data-target="slide-1">1</a></li>
+        <li><a href="" class="slide-btn" data-target="slide-2">2</a></li>
+        <li><a href="" class="slide-btn" data-target="slide-3">3</a></li>
+      </ul>
+
+
+      <div class="lead">
+        <svg viewBox="0 0 100 100" width="100" height="100">
+          <defs>
+            <path
+              id="circle"
+              d="
+            M 50, 50
+            m -37, 0
+            a 37,37 0 1,1 74,0
+            a 37,37 0 1,1 -74,0"
+            />
+          </defs>
+          <text font-size="17">
+            <textPath xlink:href="#circle">
+              Will you marry me, Baby...Yes I do...
+            </textPath>
+          </text>
+        </svg>
+        <a href="#" class="move-down" onclick="initNavigation();">
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </a>
+      </div>
+    </div>
+
+    <!-- **********Main Start************ -->
+    <main>
+      <!-- about section -->
+
+      <section id="about" class="about">
+        <div class="container">
+          <div class="row">
+            <h1>About Us</h1>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="img-box">
+                <img src="images/about-1.jpg" alt="" class="img-fluid" />
+                <img src="images/about-2.jpg" alt="" class="img-corner" />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img src="images/bg-tree.png" alt="" class="section-bg-img" />
+              <h4>Lorem ipsum dolor sit amet.</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nesciunt, obcaecati! Totam accusamus modi velit similique amet.
+                Voluptatum esse quo doloribus temporibus sapiente sequi unde,
+                ullam nostrum? Rem consequatur distinctio deleniti corporis
+                velit maxime ipsum explicabo sunt error quis, dolorem
+                perferendis ea aliquid iure in totam. Amet ea sit quaerat
+                dolores!
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nesciunt, obcaecati! Totam accusamus modi velit similique amet.
+                Voluptatum esse quo doloribus temporibus sapiente sequi unde,
+                ullam nostrum? Rem consequatur distinctio deleniti corporis
+                velit maxime ipsum explicabo sunt error quis, dolorem
+                perferendis ea aliquid iure in totam. Amet ea sit quaerat
+                dolores!
+              </p>
+              <a href="#" class="section-btn">Discover more</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- services section -->
+
+      <section id="services" class="services">
+        <div class="container">
+          <div class="row">
+            <h1>Our Services</h1>
+          </div>
+          <div class="row d-flex justify-content-center align-items-center">
+            <div
+              class="col-lg-4 d-flex justify-content-center align-items-center"
+            >
+              <div class="card">
+                <div class="img-box">
+                  <img src="images/services-1.jpg" alt="" />
+                </div>
+                <div class="details">
+                  <h4>Wedding Plan</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Maxime temporibus odit harum quod odio, sed quibusdam atque
+                    numquam asperiores debitis cupiditate ipsam quam recusandae
+                    veniam voluptatum laboriosam in dolore cum.
+                  </p>
+                  <a href="#" class="section-btn">Discover more</a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 d-flex justify-content-center align-items-center"
+            >
+              <div class="card">
+                <div class="img-box">
+                  <img src="images/services-2.jpg" alt="" />
+                </div>
+                <div class="details">
+                  <h4>Ceremony</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Maxime temporibus odit harum quod odio, sed quibusdam atque
+                    numquam asperiores debitis cupiditate ipsam quam recusandae
+                    veniam voluptatum laboriosam in dolore cum.
+                  </p>
+                  <a href="#" class="section-btn">Discover more</a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 d-flex justify-content-center align-items-center"
+            >
+              <div class="card">
+                <div class="img-box">
+                  <img src="images/services-3.jpg" alt="" />
+                </div>
+                <div class="details">
+                  <h4>Honeymoon</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Maxime temporibus odit harum quod odio, sed quibusdam atque
+                    numquam asperiores debitis cupiditate ipsam quam recusandae
+                    veniam voluptatum laboriosam in dolore cum.
+                  </p>
+                  <a href="#" class="section-btn">Discover more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- portfolio section -->
+
+      <section id="portfolio" class="portfolio">
+        <div class="container">
+          <div class="row">
+            <h1>Our Portfolio</h1>
+          </div>
+          <ul id="portfolio-filters" class="d-flex justify-content-center">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-wedding">Wedding</li>
+            <li data-filter=".filter-ceremony">Ceremony</li>
+            <li data-filter=".filter-honeymoon">Honeymoon</li>
+          </ul>
+
+          <div class="row portfolio-container">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-wedding">
+              <div class="portfolio-img">
+                <img
+                  class="img-fluid"
+                  src="images/portfolio/portfolio-1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="portfolio-info">
+                <h4>Wedding planning 1</h4>
+                <p>wedding planning 1</p>
+                <a
+                  href="images/portfolio/portfolio-1.jpg"
+                  data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link"
+                  title="Wedding Planning 1"
+                  ><ion-icon name="add-outline"></ion-icon
+                ></a>
+                <a href="#" class="details-link" title="More Details"
+                  ><ion-icon name="link-outline"></ion-icon
+                ></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-wedding">
+              <div class="portfolio-img">
+                <img
+                  class="img-fluid"
+                  src="images/portfolio/portfolio-2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="portfolio-info">
+                <h4>Wedding planning 2</h4>
+                <p>wedding planning 2</p>
+                <a
+                  href="images/portfolio/portfolio-2.jpg"
+                  data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link"
+                  title="Wedding Planning 2"
+                  ><ion-icon name="add-outline"></ion-icon
+                ></a>
+                <a href="#" class="details-link" title="More Details"
+                  ><ion-icon name="link-outline"></ion-icon
+                ></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-wedding">
+              <div class="portfolio-img">
+                <img
+                  class="img-fluid"
+                  src="images/portfolio/portfolio-3.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="portfolio-info">
+                <h4>Wedding planning 3</h4>
+                <p>wedding planning 3</p>
+                <a
+                  href="images/portfolio/portfolio-3.jpg"
+                  data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link"
+                  title="Wedding Planning 3"
+                  ><ion-icon name="add-outline"></ion-icon
+                ></a>
+                <a href="#" class="details-link" title="More Details"
+                  ><ion-icon name="link-outline"></ion-icon
+                ></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-wedding">
+              <div class="portfolio-img">
+                <img
+                  class="img-fluid"
+                  src="images/portfolio/portfolio-4.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="portfolio-info">
+                <h4>Wedding planning 4</h4>
+                <p>wedding planning 4</p>
+                <a
+                  href="images/portfolio/portfolio-4.jpg"
+                  data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link"
+                  title="Wedding Planning 4"
+                  ><ion-icon name="add-outline"></ion-icon
+                ></a>
+                <a href="#" class="details-link" title="More Details"
+                  ><ion-icon name="link-outline"></ion-icon
+                ></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-ceremony">
+              <div class="portfolio-img">
+                <img
+                  class="img-fluid"
+                  src="images/portfolio/portfolio-5.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="portfolio-info">
+                <h4>Ceremony 1</h4>
+                <p>ceremony 1</p>
+                <a
+                  href="images/portfolio/portfolio-5.jpg"
+                  data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link"
+                  title="Ceremony 1"
+                  ><ion-icon name="add-outline"></ion-icon
+                ></a>
+                <a href="#" class="details-link" title="More Details"
+                  ><ion-icon name="link-outline"></ion-icon
+                ></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-ceremony">
+              <div class="portfolio-img">
+                <img
+                  class="img-fluid"
+                  src="images/portfolio/portfolio-6.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="portfolio-info">
+                <h4>Ceremony 2</h4>
+                <p>ceremony 2</p>
+                <a
+                  href="images/portfolio/portfolio-6.jpg"
+                  data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link"
+                  title="Ceremony 2"
+                  ><ion-icon name="add-outline"></ion-icon
+                ></a>
+                <a href="#" class="details-link" title="More Details"
+                  ><ion-icon name="link-outline"></ion-icon
+                ></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-ceremony">
+              <div class="portfolio-img">
+                <img
+                  class="img-fluid"
+                  src="images/portfolio/portfolio-7.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="portfolio-info">
+                <h4>Ceremony 3</h4>
+                <p>ceremony 3</p>
+                <a
+                  href="images/portfolio/portfolio-7.jpg"
+                  data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link"
+                  title="Ceremony 3"
+                  ><ion-icon name="add-outline"></ion-icon
+                ></a>
+                <a href="#" class="details-link" title="More Details"
+                  ><ion-icon name="link-outline"></ion-icon
+                ></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-honeymoon">
+              <div class="portfolio-img">
+                <img
+                  class="img-fluid"
+                  src="images/portfolio/portfolio-8.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="portfolio-info">
+                <h4>Honeymoon 1</h4>
+                <p>honeymoon 1</p>
+                <a
+                  href="images/portfolio/portfolio-8.jpg"
+                  data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link"
+                  title="Honeymoon 1"
+                  ><ion-icon name="add-outline"></ion-icon
+                ></a>
+                <a href="#" class="details-link" title="More Details"
+                  ><ion-icon name="link-outline"></ion-icon
+                ></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-honeymoon">
+              <div class="portfolio-img">
+                <img
+                  class="img-fluid"
+                  src="images/portfolio/portfolio-9.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="portfolio-info">
+                <h4>Honeymoon 2</h4>
+                <p>honeymoon 2</p>
+                <a
+                  href="images/portfolio/portfolio-9.jpg"
+                  data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link"
+                  title="Honeymoon 2"
+                  ><ion-icon name="add-outline"></ion-icon
+                ></a>
+                <a href="#" class="details-link" title="More Details"
+                  ><ion-icon name="link-outline"></ion-icon
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- contact section -->
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="row">
+            <h1>Contact Us</h1>
+          </div>
+
+          <!--map insert-->
+          <div>
+            <iframe
+              style="border: 0; width: 100%; height: 400px"
+              src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=thụy khuê&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="row mt-5">
+            <div class="col-lg-4">
+              <div class="info">
+                <div class="address">
+                  <ion-icon name="location-outline"></ion-icon>
+                  <h4>Location:</h4>
+                  <p>Street Name, City Name, 123456</p>
+                </div>
+                </div>
+              </div>
+
+                <div class="col-lg-4">
+                  <div class="info">
+                <div class="email">
+                  <ion-icon name="mail-outline"></ion-icon>
+                  <h4>Email:</h4>
+                  <p>info@example.com</p>
+                </div>
+              </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="info">
+                <div class="phone">
+                  <ion-icon name="call-outline"></ion-icon>
+                  <h4>Call:</h4>
+                  <p>+1 234 567 890</p>
+                </div>
+              </div>
+              </div>
+              </div>
+            </div>
+            
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- main end -->
+
+    <!-- js vendors -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+    <!-- customized js -->
+    <script src="js/isotope.js"></script>
+    <script src="js/glightbox.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
